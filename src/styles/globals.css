@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Map tokens into Tailwind's theme */
+@theme {
+  --color-bg: #070d10;
+  --color-surface: #0d161b;
+  --color-surface-2: #122028;
+  --color-line: #1d2e37;
+  --color-primary: #d8e4e8;
+  --color-muted: #8ca2ab;
+  --color-accent: #2dd4c4;
+  --color-accent-dim: #14857b;
+  --color-signal: #f2b84b;
+
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+/* Base styles */
+html {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accent focus ring — spec §14 */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent-dim);
+  color: var(--text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+/* Prose max width — spec §5.3: ~70 characters */
+.prose-width {
+  max-width: 70ch;
+}

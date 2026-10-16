@@ -1,0 +1,12 @@
+/* Design tokens — spec §5.2 */
+:root {
+  --bg: #070d10;
+  --surface: #0d161b;
+  --surface-2: #122028;
+  --border: #1d2e37;
+  --text: #d8e4e8;
+  --text-muted: #8ca2ab;
+  --accent: #2dd4c4;
+  --accent-dim: #14857b;
+  --signal: #f2b84b;
+}
